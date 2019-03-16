@@ -21,6 +21,7 @@
           <name>Snapcart Releases Maven Repository</name>
           <releases>
             <enabled>true</enabled>
+            <checksumPolicy>fail</checksumPolicy>
           </releases>
           <snapshots>
             <enabled>false</enabled>
@@ -35,6 +36,8 @@
           </releases>
           <snapshots>
             <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
           </snapshots>
           <url>git:snapshots://git@github.com:snapcart/core-maven-repository.git</url>
         </repository>
