@@ -3,11 +3,49 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                           https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <servers>
-    <server>
-      <id>github-maven-repository</id>
-      <username>git</username>
-    </server>
-  </servers>
+  <!--<servers>-->
+    <!--<server>-->
+      <!--<id>snapcart-maven-repository-releases</id>-->
+      <!--<username>git</username>-->
+    <!--</server>-->
+    <!--<server>-->
+      <!--<id>snapcart-maven-repository-snapshots</id>-->
+      <!--<username>git</username>-->
+    <!--</server>-->
+  <!--</servers>-->
+
+  <profiles>
+    <profile>
+      <id>snapcart</id>
+      <repositories>
+          <repository>
+            <id>snapcart-maven-repository-releases</id>
+            <name>Snapcart Releases Maven Repository</name>
+            <releases>
+              <enabled>true</enabled>
+            </releases>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+            <url>git:releases://git@github.com:snapcart/core-maven-repository.git</url>
+          </repository>
+          <repository>
+            <id>snapcart-maven-repository-snapshots</id>
+            <name>Snapcart Snapshots Maven Repository</name>
+            <releases>
+              <enabled>false</enabled>
+            </releases>
+            <snapshots>
+              <enabled>true</enabled>
+            </snapshots>
+            <url>git:snapshots://git@github.com:snapcart/core-maven-repository.git</url>
+          </repository>
+        </repositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>snapcart</activeProfile>
+  </activeProfiles>
 
 </settings>
