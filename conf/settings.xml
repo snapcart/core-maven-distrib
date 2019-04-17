@@ -26,7 +26,7 @@
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
-          <url>https://raw.github.com/snapcart/core-maven-repository.git/releases</url>
+          <url>https://raw.githubusercontent.com/snapcart/core-maven-repository/releases</url>
         </repository>
         <repository>
           <id>snapcart-maven-repository-snapshots</id>
@@ -39,7 +39,7 @@
             <updatePolicy>always</updatePolicy>
             <checksumPolicy>warn</checksumPolicy>
           </snapshots>
-          <url>https://raw.github.com/snapcart/core-maven-repository.git/snapshots</url>
+          <url>https://raw.githubusercontent.com/snapcart/core-maven-repository/snapshots</url>
         </repository>
       </repositories>
     </profile>
